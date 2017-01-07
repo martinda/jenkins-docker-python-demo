@@ -1,0 +1,8 @@
+#!/bin/bash
+
+docker run \
+    --rm \
+    --volume "$PWD":/tmp/app \
+    --workdir /tmp/app \
+    python3.6:maxsum /bin/bash -c 'source /tmp/venv/bin/activate && "$@"' _ "$@"
+
