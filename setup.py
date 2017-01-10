@@ -1,10 +1,7 @@
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
+from setuptools import setup
 
 config = {
-    'description': 'Max Sum'
+    'description': 'Max Sum',
     'author': "Martin d'Anjou",
     'url': 'URL to get it at.',
     'download_url': 'Where to download it.',
@@ -15,4 +12,7 @@ config = {
     'name': 'maxsum'
 }
 
-setup(**config)
+setup(**config,
+    setup_requires = ['pytest-runner'],
+    tests_require  = ['pytest']
+)
