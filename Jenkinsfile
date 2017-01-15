@@ -1,4 +1,5 @@
 node {
+    step([$class: 'WsCleanup'])
     checkout scm
     def pythonImage
     stage('build docker image') {
