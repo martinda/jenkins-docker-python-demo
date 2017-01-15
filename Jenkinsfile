@@ -6,7 +6,7 @@ node {
     }
     stage('test') {
         pythonImage.inside {
-            sh '. /tmp/venv/bin/activate && nosetests --with-xunit'
+            sh '. /tmp/venv/bin/activate && python setup.py test'
         }
     }
     stage('collect test results') {
