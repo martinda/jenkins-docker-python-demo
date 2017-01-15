@@ -7,7 +7,7 @@ node {
     }
     def pythonImage
     stage('build docker image') {
-        pythonImage = docker.build("${env.JOB_NAME}:${env.BUILD_NUMBER}")
+        pythonImage = docker.build("maxsum:build")
     }
     stage('test') {
         pythonImage.inside {
