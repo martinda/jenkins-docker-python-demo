@@ -15,6 +15,6 @@ node {
         }
     }
     stage('collect test results') {
-        junit 'nosetests.xml'
+        junit 'build/results.txt'
     }
 }
