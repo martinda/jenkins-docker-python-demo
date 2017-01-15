@@ -1,6 +1,10 @@
 node {
-    step([$class: 'WsCleanup'])
-    checkout scm
+    stage('Cleanup') {
+        step([$class: 'WsCleanup'])
+    }
+    stage('Checkout SCM') {
+        checkout scm
+    }
     def pythonImage
     stage('build docker image') {
         pythonImage = docker.build("${env.JOB_NAME}:${env.BUILD_NUMBER}")
