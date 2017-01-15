@@ -16,5 +16,5 @@ __pycache__/
 # Python egg metadata, regenerated from source files by setuptools.
 /*.egg-info
 
-# Nosetests --with-xml creates a Xunit report that we don't want in git
-nosetests.xml
+# Anything under build is not wanted in git
+build/
