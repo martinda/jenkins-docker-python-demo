@@ -1,7 +1,7 @@
 # We nail the versions for reproducibility
 
+# Runtime requirements
+numpy==1.12.0
+
 # pytest
 pytest==3.0.5
-
-# To compile the python to a standalone app
-pyinstaller==3.2
