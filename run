@@ -5,5 +5,5 @@ docker run \
     --rm \
     --volume "$PWD":/tmp/app \
     --workdir /tmp/app \
-    maxsum:build /bin/bash -c 'source /tmp/venv/bin/activate && "$@"' _ "$@"
+    maxsum:manual /bin/bash -c 'source /tmp/venv/bin/activate && "$@"' _ "$@"
 
